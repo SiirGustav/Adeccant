@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarea Interfaces Web</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/init-alpine.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
 
-    <!-- Cargar el sidebar con JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $('#sidebar').load('sidebar.html');
-        $('#navbar').load('navbar.html');
-      });
-    </script>
-  </head>
-  <body>
-    <div
-      class="flex h-screen bg-gray-50"
-      :class="{ 'overflow-hidden': isSideMenuOpen }"
-    >
-      <div class="flex h-screen bg-gray-50" id="sidebar"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarea Interfaces Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="./assets/js/init-alpine.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+  <script src="./assets/js/charts-lines.js" defer></script>
+  <script src="./assets/js/charts-pie.js" defer></script>
 
-      <div class="flex flex-col flex-1 w-full">
-        <div id="navbar"></div>
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <h2
-              class="
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#sidebar').load('sidebar.html');
+      $('#navbar').load('navbar.html');
+    });
+  </script>
+</head>
+
+<body>
+  <div class="flex h-screen bg-gray-50" :class="{ 'overflow-hidden': isSideMenuOpen }">
+    <div class="flex h-screen bg-gray-50" id="sidebar"></div>
+
+    <div class="flex flex-col flex-1 w-full">
+      <div id="navbar"></div>
+      <main class="h-full overflow-y-auto">
+        <div class="container px-6 mx-auto grid">
+          <h2 class="
                 my-6
                 text-2xl
                 font-semibold
                 text-gray-700
                 dark:text-gray-200
-              "
-            >
-              Desarrollo Av. Interfaces Web
-            </h2>
-            <!-- Cards -->
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-              <!-- Card -->
-              <div
-                class="
+              ">
+            Desarrollo Av. Interfaces Web
+          </h2>
+
+          <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+
+            <div class="
                   flex
                   items-center
                   p-4
@@ -72,47 +53,39 @@
                   rounded-lg
                   shadow-xs
                   dark:bg-gray-800
-                "
-              >
-                <div
-                  class="
+                ">
+              <div class="
                     p-3
                     mr-4
                     text-orange-500
                     bg-orange-100
                     rounded-full
                     dark:text-orange-100 dark:bg-orange-500
-                  "
-                >
-                  <i class="fa fa-users fa-lg"></i>
-                </div>
-                <div>
-                  <p
-                    class="
+                  ">
+                <i class="fa fa-users fa-lg"></i>
+              </div>
+              <div>
+                <p class="
                       mb-2
                       text-sm
                       font-medium
                       text-gray-600
                       dark:text-gray-400
-                    "
-                  >
-                    Alumnos Inscritos
-                  </p>
-                  <p
-                    class="
+                    ">
+                  Alumnos Inscritos
+                </p>
+                <p class="
                       text-lg
                       font-semibold
                       text-gray-700
                       dark:text-gray-200
-                    "
-                  >
-                    23
-                  </p>
-                </div>
+                    ">
+                  23
+                </p>
               </div>
-              <!-- Card -->
-              <div
-                class="
+            </div>
+
+            <div class="
                   flex
                   items-center
                   p-4
@@ -120,47 +93,39 @@
                   rounded-lg
                   shadow-xs
                   dark:bg-gray-800
-                "
-              >
-                <div
-                  class="
+                ">
+              <div class="
                     p-3
                     mr-4
                     text-green-500
                     bg-green-100
                     rounded-full
                     dark:text-green-100 dark:bg-green-500
-                  "
-                >
-                  <i class="fa fa-copy fa-lg"></i>
-                </div>
-                <div>
-                  <p
-                    class="
+                  ">
+                <i class="fa fa-copy fa-lg"></i>
+              </div>
+              <div>
+                <p class="
                       mb-2
                       text-sm
                       font-medium
                       text-gray-600
                       dark:text-gray-400
-                    "
-                  >
-                    Materiales Subidos
-                  </p>
-                  <p
-                    class="
+                    ">
+                  Materiales Subidos
+                </p>
+                <p class="
                       text-lg
                       font-semibold
                       text-gray-700
                       dark:text-gray-200
-                    "
-                  >
-                    6
-                  </p>
-                </div>
+                    ">
+                  6
+                </p>
               </div>
-              <!-- Card -->
-              <div
-                class="
+            </div>
+
+            <div class="
                   flex
                   items-center
                   p-4
@@ -168,47 +133,39 @@
                   rounded-lg
                   shadow-xs
                   dark:bg-gray-800
-                "
-              >
-                <div
-                  class="
+                ">
+              <div class="
                     p-3
                     mr-4
                     text-blue-500
                     bg-blue-100
                     rounded-full
                     dark:text-blue-100 dark:bg-blue-500
-                  "
-                >
-                  <i class="fa fa-pencil-square-o fa-lg"></i>
-                </div>
-                <div>
-                  <p
-                    class="
+                  ">
+                <i class="fa fa-pencil-square-o fa-lg"></i>
+              </div>
+              <div>
+                <p class="
                       mb-2
                       text-sm
                       font-medium
                       text-gray-600
                       dark:text-gray-400
-                    "
-                  >
-                    Evaluaciones Realizadas
-                  </p>
-                  <p
-                    class="
+                    ">
+                  Evaluaciones Realizadas
+                </p>
+                <p class="
                       text-lg
                       font-semibold
                       text-gray-700
                       dark:text-gray-200
-                    "
-                  >
-                    3
-                  </p>
-                </div>
+                    ">
+                  3
+                </p>
               </div>
-              <!-- Card -->
-              <div
-                class="
+            </div>
+
+            <div class="
                   flex
                   items-center
                   p-4
@@ -216,56 +173,48 @@
                   rounded-lg
                   shadow-xs
                   dark:bg-gray-800
-                "
-              >
-                <div
-                  class="
+                ">
+              <div class="
                     p-3
                     mr-4
                     text-teal-500
                     bg-teal-100
                     rounded-full
                     dark:text-teal-100 dark:bg-teal-500
-                  "
-                >
-                  <i class="fa fa-video-camera fa-lg"></i>
-                </div>
-                <div>
-                  <p
-                    class="
+                  ">
+                <i class="fa fa-video-camera fa-lg"></i>
+              </div>
+              <div>
+                <p class="
                       mb-2
                       text-sm
                       font-medium
                       text-gray-600
                       dark:text-gray-400
-                    "
-                  >
-                    Videoconferencias
-                  </p>
-                  <p
-                    class="
+                    ">
+                  Videoconferencias
+                </p>
+                <p class="
                       text-lg
                       font-semibold
                       text-gray-700
                       dark:text-gray-200
-                    "
-                  >
-                    26
-                  </p>
-                </div>
+                    ">
+                  26
+                </p>
               </div>
             </div>
+          </div>
 
-            <!-- New Table -->
-            <div class="w-full overflow-hidden rounded-lg shadow-xs">
-              <div class="w-full overflow-x-auto">
-                <table class="w-full whitespace-no-wrap">
-                  <caption class="text-gray-600 font-bold">
-                    Entregas Tarea Semestral
-                  </caption>
-                  <thead>
-                    <tr
-                      class="
+
+          <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            <div class="w-full overflow-x-auto">
+              <table class="w-full whitespace-no-wrap">
+                <caption class="text-gray-600 font-bold">
+                  Entregas Tarea Semestral
+                </caption>
+                <thead>
+                  <tr class="
                         text-xs
                         font-semibold
                         tracking-wide
@@ -275,27 +224,22 @@
                         dark:border-gray-700
                         bg-gray-50
                         dark:text-gray-400 dark:bg-gray-800
-                      "
-                    >
-                      <th class="px-4 py-3">Alumno</th>
-                      <th class="px-4 py-3">Estado</th>
-                      <th class="px-4 py-3">Fecha de entrega</th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="
+                      ">
+                    <th class="px-4 py-3">Alumno</th>
+                    <th class="px-4 py-3">Estado</th>
+                    <th class="px-4 py-3">Fecha de entrega</th>
+                  </tr>
+                </thead>
+                <tbody class="
                       bg-white
                       divide-y
                       dark:divide-gray-700 dark:bg-gray-800
-                    "
-                  >
-                    <!-- Leo -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+                    ">
+
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -303,30 +247,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets//img//lCasanova.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Leonel Casanova</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              11° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets//img//lCasanova.png" alt=""
+                            loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">Leonel Casanova</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            11° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -335,21 +270,18 @@
                             bg-red-100
                             rounded-full
                             dark:text-red-100 dark:bg-red-700
-                          "
-                        >
-                          No enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">-</td>
-                    </tr>
+                          ">
+                        No enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">-</td>
+                  </tr>
 
-                    <!-- Nacho -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -357,30 +289,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets//img//jGomez.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">José Gómez</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              11° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets//img//jGomez.png" alt=""
+                            loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">José Gómez</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            11° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -389,21 +312,17 @@
                             bg-red-100
                             rounded-full
                             dark:text-red-100 dark:bg-red-700
-                          "
-                        >
-                          No enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">-</td>
-                    </tr>
+                          ">
+                        No enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">-</td>
+                  </tr>
 
-                    <!-- Pipe -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -411,30 +330,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets//img//fValenzuela.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Felipe Valenzuela</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              9° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets//img//fValenzuela.png"
+                            alt="" loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">Felipe Valenzuela</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            9° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -443,21 +353,19 @@
                             bg-red-100
                             rounded-full
                             dark:text-red-100 dark:bg-red-700
-                          "
-                        >
-                          No enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">-</td>
-                    </tr>
+                          ">
+                        No enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">-</td>
+                  </tr>
 
-                    <!-- Sir -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -465,30 +373,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets/img/pContreras.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Pablo Contreras</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              11° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets/img/pContreras.png" alt=""
+                            loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">Pablo Contreras</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            11° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -497,21 +396,19 @@
                             bg-green-100
                             rounded-full
                             dark:bg-green-700 dark:text-green-100
-                          "
-                        >
-                          Enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">6/08/2021</td>
-                    </tr>
+                          ">
+                        Enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">6/08/2021</td>
+                  </tr>
 
-                    <!-- Sir -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -519,30 +416,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets/img/gGutierrez.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Gustavo Gutiérrez</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              11° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets/img/gGutierrez.png" alt=""
+                            loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">Gustavo Gutiérrez</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            11° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -551,21 +439,18 @@
                             bg-green-100
                             rounded-full
                             dark:bg-green-700 dark:text-green-100
-                          "
-                        >
-                          Enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">3/08/2021</td>
-                    </tr>
+                          ">
+                        Enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">3/08/2021</td>
+                  </tr>
 
-                    <!-- Benja -->
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="
+
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+                        <div class="
                               relative
                               hidden
                               w-8
@@ -573,30 +458,21 @@
                               mr-3
                               rounded-full
                               md:block
-                            "
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="./assets/img/bValenzuela.png"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Benjamín Valenzuela</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              9° Semestre
-                            </p>
-                          </div>
+                            ">
+                          <img class="object-cover w-full h-full rounded-full" src="./assets/img/bValenzuela.png" alt=""
+                            loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="
+                        <div>
+                          <p class="font-semibold">Benjamín Valenzuela</p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+                            9° Semestre
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <span class="
                             px-2
                             py-1
                             font-semibold
@@ -605,20 +481,20 @@
                             bg-green-100
                             rounded-full
                             dark:bg-green-700 dark:text-green-100
-                          "
-                        >
-                          Enviado
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">1/08/2021</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                          ">
+                        Enviado
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">1/08/2021</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

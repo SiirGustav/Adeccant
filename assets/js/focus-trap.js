@@ -1,21 +1,11 @@
-/**
- * Limit focus to focusable elements inside `element`
- * @param {HTMLElement} element - DOM element to focus trap inside
- * @return {Function} cleanup function
- */
 function focusTrap(element) {
   const focusableElements = getFocusableElements(element)
   const firstFocusableEl = focusableElements[0]
   const lastFocusableEl = focusableElements[focusableElements.length - 1]
 
-  // Wait for the case the element was not yet rendered
+  
   setTimeout(() => firstFocusableEl.focus(), 50)
 
-  /**
-   * Get all focusable elements inside `element`
-   * @param {HTMLElement} element - DOM element to focus trap inside
-   * @return {HTMLElement[]} List of focusable elements
-   */
   function getFocusableElements(element = document) {
     return [
       ...element.querySelectorAll(

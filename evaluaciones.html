@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarea Interfaces Web</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/init-alpine.js"></script>
-    <!-- Cargar el sidebar con JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $('#sidebar').load('sidebar.html');
-        $('#navbar').load('navbar.html');
-      });
-    </script>
-  </head>
-  <body>
-    <div
-      class="flex h-screen bg-gray-50 dark:bg-gray-900"
-      :class="{ 'overflow-hidden': isSideMenuOpen}"
-    >
-      <div class="flex h-screen bg-gray-50" id="sidebar"></div>
 
-      <div class="flex flex-col flex-1">
-        <div id="navbar"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarea Interfaces Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="./assets/js/init-alpine.js"></script>
 
-        <main class="h-full pb-16 overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <h2
-              class="
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#sidebar').load('sidebar.html');
+      $('#navbar').load('navbar.html');
+    });
+  </script>
+</head>
+
+<body>
+  <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen}">
+    <div class="flex h-screen bg-gray-50" id="sidebar"></div>
+
+    <div class="flex flex-col flex-1">
+      <div id="navbar"></div>
+
+      <main class="h-full pb-16 overflow-y-auto">
+        <div class="container px-6 mx-auto grid">
+          <h2 class="
                 my-6
                 text-2xl
                 font-semibold
                 text-gray-700
                 dark:text-gray-200
-              "
-            >
-              Evaluaciones
-            </h2>
+              ">
+            Evaluaciones
+          </h2>
 
-            <!-- Inicio tarjetas evaluaciones -->
-            <div class="grid mb-8 gap-6 md:grid-cols-2">
-              <!-- Tarjeta en curso -->
-              <a
-                class="
+
+          <div class="grid mb-8 gap-6 md:grid-cols-2">
+            <a class="
                   min-w-0
                   p-4
                   text-white
@@ -61,25 +50,20 @@
                   grid
                   gap-6
                   md:grid-cols-2
-                "
-                href=""
-              >
-                <div>
-                  <h4 class="mb-4 font-semibold">Proyecto Final - EN CURSO</h4>
-                  <p>13/08/2021</p>
-                </div>
-                <p>
-                  Estudiantes:<br />
-                  *
-                  Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18<br />
-                  * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;5
-                </p>
-              </a>
+                " href="">
+              <div>
+                <h4 class="mb-4 font-semibold">Proyecto Final - EN CURSO</h4>
+                <p>13/08/2021</p>
+              </div>
+              <p>
+                Estudiantes:<br />
+                *
+                Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18<br />
+                * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;5
+              </p>
+            </a>
 
-              <!-- Tarjetas pasadas -->
-
-              <a
-                class="
+            <a class="
                   min-w-0
                   p-4
                   bg-white
@@ -89,27 +73,22 @@
                   grid
                   gap-6
                   md:grid-cols-2
-                "
-                href=""
-              >
-                <div>
-                  <h4
-                    class="mb-4 font-semibold text-gray-600 dark:text-gray-300"
-                  >
-                    Conversación
-                  </h4>
-                  <p>17/07/2021</p>
-                </div>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Estudiantes:<br />
-                  *
-                  Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23<br />
-                  * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;0
-                </p>
-              </a>
+                " href="">
+              <div>
+                <h4 class="mb-4 font-semibold text-gray-600 dark:text-gray-300">
+                  Conversación
+                </h4>
+                <p>17/07/2021</p>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400">
+                Estudiantes:<br />
+                *
+                Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23<br />
+                * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;0
+              </p>
+            </a>
 
-              <a
-                class="
+            <a class="
                   min-w-0
                   p-4
                   bg-white
@@ -120,27 +99,22 @@
                   gap-6
                   mb-8
                   md:grid-cols-2
-                "
-                href=""
-              >
-                <div>
-                  <h4
-                    class="mb-4 font-semibold text-gray-600 dark:text-gray-300"
-                  >
-                    Comparativa de Frameworks
-                  </h4>
-                  <p>22/06/2021</p>
-                </div>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Estudiantes:<br />
-                  *
-                  Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22<br />
-                  * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;1
-                </p>
-              </a>
+                " href="">
+              <div>
+                <h4 class="mb-4 font-semibold text-gray-600 dark:text-gray-300">
+                  Comparativa de Frameworks
+                </h4>
+                <p>22/06/2021</p>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400">
+                Estudiantes:<br />
+                *
+                Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22<br />
+                * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;1
+              </p>
+            </a>
 
-              <a
-                class="
+            <a class="
                   min-w-0
                   p-4
                   bg-white
@@ -151,28 +125,25 @@
                   gap-6
                   mb-8
                   md:grid-cols-2
-                "
-                href=""
-              >
-                <div>
-                  <h4
-                    class="mb-4 font-semibold text-gray-600 dark:text-gray-300"
-                  >
-                    Inicial
-                  </h4>
-                  <p>01/04/2021</p>
-                </div>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Estudiantes:<br />
-                  *
-                  Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23<br />
-                  * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;0
-                </p>
-              </a>
-            </div>
+                " href="">
+              <div>
+                <h4 class="mb-4 font-semibold text-gray-600 dark:text-gray-300">
+                  Inicial
+                </h4>
+                <p>01/04/2021</p>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400">
+                Estudiantes:<br />
+                *
+                Finalizados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23<br />
+                * No entregados:&nbsp;&nbsp;&nbsp;&nbsp;0
+              </p>
+            </a>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
